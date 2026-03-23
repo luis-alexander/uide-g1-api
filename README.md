@@ -1,4 +1,4 @@
-# 🔐 API de Autenticación con Notificaciones por Email
+## 1. 🔐 API de Autenticación con Notificaciones por Email
 
 > **Trabajo de Maestría v2.0** — Sistema de login seguro con bcrypt, JWT y alertas por Gmail SMTP.
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 🚀 Funcionalidades
+## 2. 🚀 Funcionalidades
 
 | Función | Detalle |
 |---|---|
@@ -25,7 +25,7 @@
 
 ---
 
-## 📁 Estructura del proyecto
+## 3. 📁 Estructura del proyecto
 
 ```
 api-login/
@@ -44,9 +44,7 @@ api-login/
 
 ---
 
-## ⚙️ Configuración de Gmail
-
-> ⚠️ **IMPORTANTE**: No uses tu contraseña normal de Gmail. Debes crear una **Contraseña de Aplicación**.
+## 4. ⚙️ Configuración de Gmail
 
 ### Pasos para obtener la App Password de Gmail:
 
@@ -56,7 +54,7 @@ api-login/
 4. Escribe `API Maestría` → Haz clic en **Generar**
 5. Copia el código de 16 caracteres (ej: `abcd efgh ijkl mnop`)
 
-### Configurar el .env:
+5. Configurar el .env:
 ```bash
 cp .env.example .env
 # Editar .env con tus datos:
@@ -67,7 +65,7 @@ JWT_SECRET=mi-clave-secreta-segura
 
 ---
 
-## 💻 Instalación local
+## 6. 💻 Instalación local
 
 ```bash
 # 1. Clonar
@@ -92,7 +90,7 @@ uvicorn app.main:app --reload --port 8080
 
 ---
 
-## 🐳 Docker
+## 7. 🐳 Docker
 
 ```bash
 # Construir imagen
@@ -114,7 +112,7 @@ curl http://localhost:8080/health
 
 ---
 
-## 🔌 Endpoints
+## 8. 🔌 Endpoints
 
 ### Públicos
 | Método | Ruta | Descripción |
@@ -136,7 +134,7 @@ curl http://localhost:8080/health
 
 ---
 
-## 📧 Emails que se envían
+## 9. 📧 Emails que se envían
 
 ### ✅ Login exitoso
 Se envía al email del usuario al iniciar sesión correctamente.
@@ -165,7 +163,7 @@ Contenido:
 
 ---
 
-## 🧪 Pruebas con curl
+## 10. 🧪 Pruebas con curl
 
 ```bash
 # Ejecutar todas las pruebas
@@ -188,7 +186,7 @@ curl http://localhost:8080/auth/me \
 
 ---
 
-## ☁️ Despliegue en Cloud Run
+## 11. ☁️ Despliegue en Cloud Run
 
 ```bash
 # Build y push
@@ -209,7 +207,7 @@ gcloud run deploy api-login \
 
 ---
 
-## 🌿 Branches del proyecto
+## 12. 🌿 Branches del proyecto
 
 ```
 main
@@ -229,7 +227,7 @@ git push origin feature/email-alerts
 
 ---
 
-## 🔑 Variables de entorno
+## 13. 🔑 Variables de entorno
 
 | Variable | Default | Descripción |
 |---|---|---|
@@ -241,25 +239,64 @@ git push origin feature/email-alerts
 
 ---
 
-## 📸 Evidencias
+## 14. 📸 Evidencias
 
-### 1. API local en /docs
-*(Captura Swagger UI en http://localhost:8080/docs)*
+ ### 1. API funcionando localmente en /docs
+> Swagger UI en http://localhost:8080/docs
+<img width="886" height="470" alt="image" src="https://github.com/user-attachments/assets/cf8afaae-8519-488a-9657-a9e26968d2ce" />
+<img width="886" height="316" alt="image" src="https://github.com/user-attachments/assets/1325bf48-acf4-4fdd-b2a3-d1a45625d4f5" />
 
-### 2. Docker build
+
+ ### 2. Construcción de imagen Dockerizada
 ```
 docker build -t api-login:latest .
 [+] Building 52.3s ✅
 ```
+<img width="886" height="506" alt="image" src="https://github.com/user-attachments/assets/5c871ff4-ea69-4f6f-a6c8-7c91145cd6e3" />
 
-### 3. Email recibido — Login exitoso
-*(Captura del email en bandeja de entrada)*
+### 3. Contenedor ejecutándose 
+> Resultado del comando `docker ps`
+<img width="886" height="49" alt="image" src="https://github.com/user-attachments/assets/be36c39c-d21a-470e-8fd0-d96209042d37" />
 
-### 4. Email recibido — Alerta de seguridad
-*(Captura del email de alerta con barra de riesgo)*
+### 4. Prueba curl — GET /health
+<img width="886" height="42" alt="image" src="https://github.com/user-attachments/assets/e1afdaa3-8ec8-4ce0-95a0-47cda48a1b49" />
 
-### 5. Cloud Run activo
-*(Captura consola GCP - servicio api-login ACTIVO)*
+### 5. Prueba curl — POST /auth/register
+<img width="886" height="107" alt="image" src="https://github.com/user-attachments/assets/a89f4378-bde7-4535-8c1f-d2daaa35535f" />
+
+### 6. Prueba curl — POST /auth/login
+<img width="886" height="75" alt="image" src="https://github.com/user-attachments/assets/dc28ae32-6db9-4d5c-8e6d-e7c915663e5b" />
+
+### 7. Prueba curl — GET /admin/users
+<img width="886" height="56" alt="image" src="https://github.com/user-attachments/assets/aed9e98f-6f47-45d6-ad64-0b29dfd3b099" />
+
+### 8. Manejo de errores (400 y 401)
+> Error 400 (email duplicado)
+<img width="886" height="100" alt="image" src="https://github.com/user-attachments/assets/ee38ad48-4722-4b15-bdbd-42708b2ab49c" />
+
+> Error 401 (login fallido)
+<img width="886" height="108" alt="image" src="https://github.com/user-attachments/assets/92c8e51e-8a74-4fe0-8172-7bda63fbf0a1" />
+
+### 9. Email recibido — Login exitoso
+<img width="886" height="104" alt="image" src="https://github.com/user-attachments/assets/ce4bd5b7-d99f-42a7-ac42-8eb750b7330c" />
+<img width="886" height="75" alt="image" src="https://github.com/user-attachments/assets/01c7837a-9906-4eb6-8b5e-2bf90d702046" />
+<img width="886" height="503" alt="image" src="https://github.com/user-attachments/assets/367a4f45-27a7-49ca-8ea1-b1e4424f72e2" />
+
+### 10. Email recibido — Alerta de seguridad
+
+<img width="886" height="108" alt="image" src="https://github.com/user-attachments/assets/bb1ee1d5-d557-4fcb-b33c-2dd526246f23" />
+
+### 11. Imagen subida a Container Registry
+<img width="886" height="284" alt="image" src="https://github.com/user-attachments/assets/2603c02d-cda5-4290-b283-aed66b6f37fb" />
+
+### 12. API desplegada en Cloud Run
+<img width="1918" height="602" alt="image" src="https://github.com/user-attachments/assets/f59aa612-9c54-46ea-b50f-c3f2136bf3e6" />
+<img width="886" height="71" alt="image" src="https://github.com/user-attachments/assets/17c38e64-384d-4920-bcd1-2f12d3c7199e" />
+<img width="886" height="503" alt="image" src="https://github.com/user-attachments/assets/ae59603f-779e-49fe-a8ab-87b0e435ac85" />
+
+### 13. Endpoint público accesible
+
+<img width="1919" height="334" alt="image" src="https://github.com/user-attachments/assets/0146ba16-ce47-4cf3-87d9-74d6d5696fe7" />
 
 ---
 
