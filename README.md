@@ -285,6 +285,8 @@ docker build -t api-login:latest .
 ### 10. Email recibido — Alerta de seguridad
 
 <img width="886" height="108" alt="image" src="https://github.com/user-attachments/assets/bb1ee1d5-d557-4fcb-b33c-2dd526246f23" />
+<img width="886" height="584" alt="image" src="https://github.com/user-attachments/assets/f9cd286b-3873-426f-a407-6ae7fe463174" />
+
 
 ### 11. Imagen subida a Container Registry
 <img width="886" height="284" alt="image" src="https://github.com/user-attachments/assets/2603c02d-cda5-4290-b283-aed66b6f37fb" />
