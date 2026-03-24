@@ -1,6 +1,6 @@
 ## 1. 🔐 API de Autenticación con Notificaciones por Email
 
-> **Trabajo de Maestría v2.0** — Sistema de login seguro con bcrypt, JWT y alertas por Gmail SMTP.
+> **Trabajo de Maestría - Tratamiento de Datos** — Sistema de login seguro con bcrypt, JWT y alertas por Gmail SMTP.
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?style=flat&logo=fastapi)](https://fastapi.tiangolo.com)
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat&logo=python)](https://python.org)
