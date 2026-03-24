@@ -41,6 +41,16 @@ api-login/
 ├── test_login.sh         # Pruebas con curl
 └── README.md
 ```
+---
+
+## Estructura de ramas del repositorio 
+### A continuación se presentan las ramas que fueron creadas: 
+
+1. Main -> Rama principal o de produccion 
+2. develop-AT -> Rama de desarrollador Alejandra Tello
+3. develop-LS -> Rama de desarrollador Luis Soto
+4. develop-EB -> Rama de desarrollador Elvis Borbor
+
 
 ---
 
