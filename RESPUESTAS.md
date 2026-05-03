@@ -56,5 +56,15 @@ La base de datos **debe estar desacoplada del contenedor de la API**. Nunca debe
 - Escalado vertical sin tiempo de inactividad.
 - Sin necesidad de gestionar el servidor de base de datos.
 
+### Resumen de la decisión
 
+| Criterio | Decisión |
+|---|---|
+| Motor de base de datos | **PostgreSQL** |
+| Razón principal | Datos relacionales, garantías ACID, integración nativa con FastAPI |
+| Dónde alojar en producción | Servicio gestionado en la nube (Supabase o AWS RDS) |
+| Dónde alojar en desarrollo | Docker Compose con volumen persistente (ya integrado en el proyecto) |
+| Integración con FastAPI/Python | SQLAlchemy (ORM) + Alembic (migraciones) |
+| Gestión de credenciales | Variables de entorno en `.env` (ya implementado en el proyecto) |
+| Datos que migran de memoria a BD | Usuarios, sesiones, historial de IPs, contadores de intentos fallidos |
 
