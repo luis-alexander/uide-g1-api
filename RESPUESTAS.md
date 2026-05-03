@@ -77,18 +77,18 @@ En este caso, PostgreSQL sería una buena opción porque permite manejar datos p
 
 **Que consideraciones deben tomar en cuenta para el almacenamiento y transporte de datos para prevenir ataques?**
 
-- Consideraciones para almacenamiento seguro de datos:
--- Cifrado en reposo: proteger la información almacenada (ej. discos cifrados en PostgreSQL).
--- Control de accesos: uso de roles, privilegios mínimos y autenticación fuerte.
--- Backups seguros: copias cifradas y almacenadas en ubicaciones separadas.
--- Actualizaciones y parches: mantener la base de datos y sistema al día.
--- Segmentación de red: aislar la base de datos del acceso público.
+- **Consideraciones para almacenamiento seguro de datos:**
+- Cifrado en reposo: proteger la información almacenada (ej. discos cifrados en PostgreSQL).
+- Control de accesos: uso de roles, privilegios mínimos y autenticación fuerte.
+- Backups seguros: copias cifradas y almacenadas en ubicaciones separadas.
+- Actualizaciones y parches: mantener la base de datos y sistema al día.
+- Segmentación de red: aislar la base de datos del acceso público.
 
-- Consideraciones para transporte seguro de datos:
--- Cifrado en tránsito: uso de protocolos seguros como TLS (HTTPS).
--- Uso de VPN: para conexiones internas o administrativas seguras.
--- Validación de certificados: evitar ataques de tipo “man-in-the-middle”.
--- Autenticación segura: uso de tokens, OAuth o credenciales robustas.
--- Protección contra interceptación: evitar enviar datos sensibles en texto plano.
+- **Consideraciones para transporte seguro de datos:**
+- Cifrado en tránsito: uso de protocolos seguros como TLS (HTTPS).
+- Uso de VPN: para conexiones internas o administrativas seguras.
+- Validación de certificados: evitar ataques de tipo “man-in-the-middle”.
+- Autenticación segura: uso de tokens, OAuth o credenciales robustas.
+- Protección contra interceptación: evitar enviar datos sensibles en texto plano.
 
 En producción, lo ideal es usar una base de datos como PostgreSQL en un entorno separado de la aplicación, con acceso seguro y backups configurados.
