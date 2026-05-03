@@ -75,16 +75,16 @@ Para elegir la base de datos en producción se deben considerar factores como el
 
 En este caso, PostgreSQL sería una buena opción porque permite manejar datos persistentes, relaciones entre tablas, transacciones seguras y control de acceso. Además, es importante definir dónde reposará la base de datos: puede estar en un servidor propio de la institución, en una máquina virtual, en un contenedor dedicado o en un servicio administrado en la nube, dependiendo de los recursos disponibles y las políticas de seguridad.
 
-**Que consideraciones deben tomar en cuenta para el almacenamiento y transporte de datos para prevenir ataques?**
+### Que consideraciones deben tomar en cuenta para el almacenamiento y transporte de datos para prevenir ataques?
 
-- **Consideraciones para almacenamiento seguro de datos:**
+**Consideraciones para almacenamiento seguro de datos:**
 - Cifrado en reposo: proteger la información almacenada (ej. discos cifrados en PostgreSQL).
 - Control de accesos: uso de roles, privilegios mínimos y autenticación fuerte.
 - Backups seguros: copias cifradas y almacenadas en ubicaciones separadas.
 - Actualizaciones y parches: mantener la base de datos y sistema al día.
 - Segmentación de red: aislar la base de datos del acceso público.
 
-- **Consideraciones para transporte seguro de datos:**
+**Consideraciones para transporte seguro de datos:**
 - Cifrado en tránsito: uso de protocolos seguros como TLS (HTTPS).
 - Uso de VPN: para conexiones internas o administrativas seguras.
 - Validación de certificados: evitar ataques de tipo “man-in-the-middle”.
